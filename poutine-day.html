@@ -61,10 +61,10 @@
 
   .cs-hero-title {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(32px, 5vw, 60px);
+    font-size: clamp(28px, 4vw, 42px);
     font-weight: 800; line-height: 1.05;
     letter-spacing: -0.03em; color: var(--white);
-    max-width: 800px; margin-bottom: 20px;
+    max-width: 700px; margin-bottom: 20px;
   }
   .cs-hero-title span { color: var(--gold); }
 
@@ -118,15 +118,6 @@
     font-size: 0.72rem;
     color: var(--muted);
     letter-spacing: 0.06em;
-  }
-
-  /* CAMPAIGN IMAGE */
-  .campaign-img-strip {
-    width: 100%; max-height: 480px; overflow: hidden;
-    border-bottom: 1px solid var(--border);
-  }
-  .campaign-img-strip img {
-    width: 100%; object-fit: cover; display: block; max-height: 480px;
   }
 
   /* CONTENT WRAPPER */
@@ -200,6 +191,10 @@
     font-size: 0.72rem; color: var(--muted);
   }
   .chart-canvas-wrap { position: relative; height: 240px; }
+  .chart-note {
+    font-size: 0.68rem; color: var(--muted); margin-top: 14px;
+    letter-spacing: 0.04em; text-align: center;
+  }
 
   /* BUDGET LAYOUT */
   .budget-visual-layout {
@@ -237,25 +232,21 @@
   .budget-legend-name {
     font-size: 0.82rem; color: var(--text); flex: 1;
   }
-  .budget-legend-amount {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.9rem; font-weight: 700; color: var(--gold);
-  }
   .budget-legend-pct {
-    font-size: 0.7rem; color: var(--muted); margin-left: 4px;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.88rem; font-weight: 700; color: var(--gold);
   }
-  .budget-total-row {
-    border-top: 1px solid var(--border);
-    padding-top: 14px;
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  .budget-total-label { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
-  .budget-total-val { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--gold); }
 
-  /* AD STRUCTURE */
+  /* AD STRUCTURE WITH CREATIVE PREVIEW */
+  .ad-structure-with-preview {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 28px;
+    align-items: start;
+    margin-top: 28px;
+  }
   .ad-structure-grid {
     display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
-    margin-top: 28px;
   }
   .ad-platform-card {
     background: var(--dark2); border: 1px solid var(--border);
@@ -284,6 +275,27 @@
   .ad-format-item::before {
     content: ''; width: 6px; height: 6px;
     border-radius: 50%; background: var(--gold); flex-shrink: 0;
+  }
+
+  /* CREATIVE SAMPLE THUMBNAIL */
+  .creative-sample {
+    position: sticky;
+    top: 90px;
+  }
+  .creative-sample img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    display: block;
+  }
+  .creative-sample-caption {
+    font-size: 0.65rem;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.5;
   }
 
   /* TOP PERFORMERS TABLE */
@@ -362,6 +374,8 @@
     .section-num { font-size: 4rem; }
     .perf-grid { grid-template-columns: repeat(2, 1fr); }
     .budget-visual-layout { grid-template-columns: 1fr; }
+    .ad-structure-with-preview { grid-template-columns: 1fr; }
+    .creative-sample { position: static; max-width: 280px; margin: 0 auto 24px; }
     .ad-structure-grid { grid-template-columns: 1fr; }
     .learnings-grid { grid-template-columns: 1fr; }
     .cs-bottom-nav { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
@@ -411,12 +425,7 @@
         <div class="hero-result-label">ROAS</div>
       </div>
     </div>
-    <p class="hero-window-note">2-day campaign window · April 11–12, 2026 · $4,000 total spend</p>
-  </div>
-
-  <!-- CAMPAIGN IMAGE -->
-  <div class="campaign-img-strip">
-    <img src="https://lh3.googleusercontent.com/d/1m2OhCxb8Ek547phZ2WABIsxhDtZT78vC" alt="National Poutine Day Campaign">
+    <p class="hero-window-note">2-day campaign window · April 11–12, 2026</p>
   </div>
 
   <div class="cs-content">
@@ -427,113 +436,115 @@
       <div class="cs-section-label">The Foundation</div>
       <div class="cs-section-title">Drive In-Store Traffic on National Poutine Day</div>
       <p>Boardwalk Burgers wanted to capitalise on National Poutine Day (April 11) with a limited-time offer — <strong>$5 poutine instead of the regular $7.49 price</strong> — across 23 Canadian franchise locations. The goal was maximum in-store foot traffic within a tight 2-day window, with no e-commerce tracking available. Redemptions were tracked via POS system across all locations.</p>
-      <p>The campaign needed to work at two levels simultaneously: <strong>national brand awareness</strong> to drive broad reach, and <strong>hyper-local targeting</strong> to ensure each franchise location reached its immediate market. With a combined budget of $4,000 across four platforms, every dollar needed to work hard.</p>
+      <p>The campaign needed to work at two levels simultaneously: <strong>national brand awareness</strong> to drive broad reach, and <strong>hyper-local targeting</strong> to ensure each franchise location reached its immediate market.</p>
       <p>Rather than running one blanket national campaign, the strategy was to <strong>build a unique ad set per location on Meta</strong> — 22 individual ad sets, each geo-targeted around a specific franchise — while using Instagram, TikTok, and YouTube for broader national reach to amplify awareness at scale. Each platform was assigned a distinct role in the funnel.</p>
     </div>
 
-    <!-- 02 — BUDGET & STRUCTURE -->
+    <!-- 02 — PLATFORM MIX & CREATIVE STRUCTURE -->
     <div class="cs-section fade-in">
       <div class="section-num">02</div>
-      <div class="cs-section-label">Budget & Structure</div>
-      <div class="cs-section-title">$4,000 Across Four Platforms</div>
+      <div class="cs-section-label">Platform Mix & Structure</div>
+      <div class="cs-section-title">Four Platforms, One Cohesive Campaign</div>
       <p>Meta carried the heaviest load for local conversion intent at 66% of total spend. TikTok and YouTube focused on awareness and reach among a younger demographic. Instagram bridged both — driving traffic to the locations page for users already familiar with the brand.</p>
 
-      <!-- BUDGET VISUAL -->
+      <!-- MEDIA MIX DONUT -->
       <div class="budget-visual-layout">
         <div class="budget-donut-wrap">
           <div class="chart-header">
-            <span class="chart-title">Platform Budget Split</span>
-            <span class="chart-subtitle">$4,000 total</span>
+            <span class="chart-title">Media Mix by Platform</span>
           </div>
           <div class="budget-donut-canvas-wrap">
             <canvas id="budgetChart"></canvas>
           </div>
         </div>
         <div class="budget-legend">
-          <div class="budget-legend-title">Allocation Breakdown</div>
+          <div class="budget-legend-title">Platform Allocation</div>
           <div class="budget-legend-item">
             <div class="budget-legend-dot" style="background:#F5A623;"></div>
             <span class="budget-legend-name">Meta (Facebook)</span>
-            <span class="budget-legend-amount">$2,640</span><span class="budget-legend-pct">66%</span>
+            <span class="budget-legend-pct">66%</span>
           </div>
           <div class="budget-legend-item">
             <div class="budget-legend-dot" style="background:#E8944D;"></div>
             <span class="budget-legend-name">Instagram</span>
-            <span class="budget-legend-amount">$500</span><span class="budget-legend-pct">12.5%</span>
+            <span class="budget-legend-pct">12.5%</span>
           </div>
           <div class="budget-legend-item">
             <div class="budget-legend-dot" style="background:#69C9D0;"></div>
             <span class="budget-legend-name">TikTok</span>
-            <span class="budget-legend-amount">$360</span><span class="budget-legend-pct">9%</span>
+            <span class="budget-legend-pct">9%</span>
           </div>
           <div class="budget-legend-item">
             <div class="budget-legend-dot" style="background:#FF8080;"></div>
             <span class="budget-legend-name">YouTube / PMAX</span>
-            <span class="budget-legend-amount">$500</span><span class="budget-legend-pct">12.5%</span>
-          </div>
-          <div class="budget-total-row">
-            <span class="budget-total-label">Total Spend</span>
-            <span class="budget-total-val">$4,000</span>
+            <span class="budget-legend-pct">12.5%</span>
           </div>
         </div>
       </div>
 
       <hr class="cs-section-divider">
 
-      <!-- AD STRUCTURE -->
+      <!-- AD STRUCTURE + CREATIVE PREVIEW -->
       <div class="cs-section-label" style="margin-top: 0;">Creative Formats by Platform</div>
-      <div class="ad-structure-grid">
-        <div class="ad-platform-card">
-          <div class="ad-platform-header">
-            <span class="ad-platform-icon">📘</span>
-            <span class="ad-platform-name">Meta</span>
-            <span class="ad-platform-budget">$2,640</span>
+      <div class="ad-structure-with-preview">
+        <div class="ad-structure-grid">
+          <div class="ad-platform-card">
+            <div class="ad-platform-header">
+              <span class="ad-platform-icon">📘</span>
+              <span class="ad-platform-name">Meta</span>
+              <span class="ad-platform-budget">66%</span>
+            </div>
+            <div class="ad-structure-note">22 ad sets — one per franchise location</div>
+            <ul class="ad-format-list">
+              <li class="ad-format-item">Static ad</li>
+              <li class="ad-format-item">Carousel ad</li>
+              <li class="ad-format-item">Lifestyle video with VO (food shots)</li>
+              <li class="ad-format-item">Animated graphic video with VO</li>
+            </ul>
           </div>
-          <div class="ad-structure-note">22 ad sets — one per franchise location</div>
-          <ul class="ad-format-list">
-            <li class="ad-format-item">Static ad</li>
-            <li class="ad-format-item">Carousel ad</li>
-            <li class="ad-format-item">Lifestyle video with VO (food shots)</li>
-            <li class="ad-format-item">Animated graphic video with VO</li>
-          </ul>
-        </div>
-        <div class="ad-platform-card">
-          <div class="ad-platform-header">
-            <span class="ad-platform-icon">📷</span>
-            <span class="ad-platform-name">Instagram</span>
-            <span class="ad-platform-budget">$500</span>
+          <div class="ad-platform-card">
+            <div class="ad-platform-header">
+              <span class="ad-platform-icon">📷</span>
+              <span class="ad-platform-name">Instagram</span>
+              <span class="ad-platform-budget">12.5%</span>
+            </div>
+            <div class="ad-structure-note">3 ads targeting all locations</div>
+            <ul class="ad-format-list">
+              <li class="ad-format-item">Static ad</li>
+              <li class="ad-format-item">Animated video with VO</li>
+              <li class="ad-format-item">Lifestyle video with VO (food shots)</li>
+            </ul>
           </div>
-          <div class="ad-structure-note">3 ads targeting all locations</div>
-          <ul class="ad-format-list">
-            <li class="ad-format-item">Static ad</li>
-            <li class="ad-format-item">Animated video with VO</li>
-            <li class="ad-format-item">Lifestyle video with VO (food shots)</li>
-          </ul>
-        </div>
-        <div class="ad-platform-card">
-          <div class="ad-platform-header">
-            <span class="ad-platform-icon">🎵</span>
-            <span class="ad-platform-name">TikTok</span>
-            <span class="ad-platform-budget">$360</span>
+          <div class="ad-platform-card">
+            <div class="ad-platform-header">
+              <span class="ad-platform-icon">🎵</span>
+              <span class="ad-platform-name">TikTok</span>
+              <span class="ad-platform-budget">9%</span>
+            </div>
+            <div class="ad-structure-note">2 ads — all locations</div>
+            <ul class="ad-format-list">
+              <li class="ad-format-item">Animated video with VO</li>
+              <li class="ad-format-item">Lifestyle video with VO (food shots)</li>
+            </ul>
           </div>
-          <div class="ad-structure-note">2 ads — all locations</div>
-          <ul class="ad-format-list">
-            <li class="ad-format-item">Animated video with VO</li>
-            <li class="ad-format-item">Lifestyle video with VO (food shots)</li>
-          </ul>
-        </div>
-        <div class="ad-platform-card">
-          <div class="ad-platform-header">
-            <span class="ad-platform-icon">▶️</span>
-            <span class="ad-platform-name">YouTube / PMAX</span>
-            <span class="ad-platform-budget">$500</span>
+          <div class="ad-platform-card">
+            <div class="ad-platform-header">
+              <span class="ad-platform-icon">▶️</span>
+              <span class="ad-platform-name">YouTube / PMAX</span>
+              <span class="ad-platform-budget">12.5%</span>
+            </div>
+            <div class="ad-structure-note">Performance Max — all locations</div>
+            <ul class="ad-format-list">
+              <li class="ad-format-item">Animated video with VO</li>
+              <li class="ad-format-item">Lifestyle video with VO (food shots)</li>
+            </ul>
           </div>
-          <div class="ad-structure-note">Performance Max — all locations</div>
-          <ul class="ad-format-list">
-            <li class="ad-format-item">Animated video with VO</li>
-            <li class="ad-format-item">Lifestyle video with VO (food shots)</li>
-          </ul>
         </div>
+
+        <figure class="creative-sample">
+          <img src="https://lh3.googleusercontent.com/d/1m2OhCxb8Ek547phZ2WABIsxhDtZT78vC" alt="Sample creative — static ad format">
+          <div class="creative-sample-caption">Sample Creative<br>Static Ad Format</div>
+        </figure>
       </div>
     </div>
 
@@ -542,7 +553,7 @@
       <div class="section-num">03</div>
       <div class="cs-section-label">Performance</div>
       <div class="cs-section-title">4,500+ Redemptions in 48 Hours</div>
-      <p>Redemptions were tracked via POS system across all 23 locations. With 4,500+ confirmed in-store redemptions at the $5 promotional price point, the campaign generated <strong>$22,500 in direct trackable revenue</strong> on a $4,000 spend. Real basket value was almost certainly higher as most customers purchased additional items alongside the poutine.</p>
+      <p>Redemptions were tracked via POS system across all 23 locations. With 4,500+ confirmed in-store redemptions at the $5 promotional price point, the campaign generated <strong>$22,500 in direct trackable revenue</strong>. Real basket value was almost certainly higher as most customers purchased additional items alongside the poutine.</p>
 
       <!-- Overall results -->
       <div class="perf-grid">
@@ -554,12 +565,12 @@
         <div class="perf-card">
           <div class="perf-card-label">Cost Per Redemption</div>
           <div class="perf-card-val">$0.89</div>
-          <div class="perf-card-sub">$4,000 total spend ÷ 4,500 redemptions</div>
+          <div class="perf-card-sub">Total spend ÷ 4,500 redemptions</div>
         </div>
         <div class="perf-card">
           <div class="perf-card-label">ROAS</div>
           <div class="perf-card-val">5.6x</div>
-          <div class="perf-card-sub">$22,500 direct revenue on $4,000 spend</div>
+          <div class="perf-card-sub">$22,500 direct revenue on total ad spend</div>
         </div>
       </div>
 
@@ -588,15 +599,16 @@
         </div>
       </div>
 
-      <!-- Location performance chart -->
+      <!-- Location performance INDEX chart -->
       <div class="chart-wrap">
         <div class="chart-header">
-          <span class="chart-title">Meta — Top Location Performance</span>
-          <span class="chart-subtitle">CPC vs. CTR by location</span>
+          <span class="chart-title">Meta — Location Performance Index</span>
+          <span class="chart-subtitle">Indexed to campaign average = 100</span>
         </div>
         <div class="chart-canvas-wrap">
           <canvas id="locationChart"></canvas>
         </div>
+        <p class="chart-note">Higher = better performance relative to campaign average · Dashed line marks the campaign baseline (100)</p>
       </div>
 
       <!-- Top performers table -->
@@ -681,13 +693,13 @@
     Chart.defaults.font.family = "'DM Sans', sans-serif";
     Chart.defaults.color = 'rgba(220,224,232,0.5)';
 
-    // Budget Donut Chart
+    // Chart 2 — Media Mix Donut (percentages only, no dollar figures)
     new Chart(document.getElementById('budgetChart'), {
       type: 'doughnut',
       data: {
-        labels: ['Meta', 'Instagram', 'TikTok', 'YouTube'],
+        labels: ['Meta', 'Instagram', 'TikTok', 'YouTube / PMAX'],
         datasets: [{
-          data: [2640, 500, 360, 500],
+          data: [66, 12.5, 9, 12.5],
           backgroundColor: ['#F5A623', '#E8944D', '#69C9D0', '#FF8080'],
           borderColor: '#161B23',
           borderWidth: 3,
@@ -702,7 +714,7 @@
           legend: { display: false },
           tooltip: {
             callbacks: {
-              label: (ctx) => `  ${ctx.label}: $${ctx.parsed.toLocaleString()}`
+              label: (ctx) => `  ${ctx.label}: ${ctx.parsed}%`
             },
             backgroundColor: '#1C2230',
             borderColor: 'rgba(255,255,255,0.08)',
@@ -715,30 +727,48 @@
       }
     });
 
-    // Location Performance Bar Chart
+    // Chart 1 — Location Performance Index (no raw CPC/CTR values)
+    // Campaign avg = 100. Winnipeg: CTR 126, CPC eff 157. Hamilton: CTR 112, CPC eff 127.
+    // Whitby (Static): CPC eff 144 (no CTR data). Campaign Avg: both 100.
+    const baselinePlugin = {
+      id: 'baselineLine',
+      afterDraw(chart) {
+        const { ctx, chartArea: { left, right }, scales: { y } } = chart;
+        const y100 = y.getPixelForValue(100);
+        ctx.save();
+        ctx.strokeStyle = 'rgba(245,166,35,0.35)';
+        ctx.lineWidth = 1.5;
+        ctx.setLineDash([5, 5]);
+        ctx.beginPath();
+        ctx.moveTo(left, y100);
+        ctx.lineTo(right, y100);
+        ctx.stroke();
+        ctx.restore();
+      }
+    };
+
     new Chart(document.getElementById('locationChart'), {
       type: 'bar',
+      plugins: [baselinePlugin],
       data: {
-        labels: ['Winnipeg', 'Hamilton', 'Whitby (Static)', 'Campaign Avg'],
+        labels: ['Winnipeg', 'Hamilton', 'Whitby\n(Static)', 'Campaign\nAvg'],
         datasets: [
           {
-            label: 'CPC ($)',
-            data: [0.08, 0.11, 0.09, 0.14],
+            label: 'CTR Index',
+            data: [126, 112, null, 100],
             backgroundColor: '#F5A623',
             borderColor: '#F5A623',
             borderRadius: 5,
-            borderSkipped: false,
-            yAxisID: 'y'
+            borderSkipped: false
           },
           {
-            label: 'CTR (%)',
-            data: [4.60, 4.1, null, 3.65],
-            backgroundColor: 'rgba(245,166,35,0.28)',
-            borderColor: 'rgba(245,166,35,0.55)',
+            label: 'CPC Efficiency Index',
+            data: [157, 127, 144, 100],
+            backgroundColor: 'rgba(245,166,35,0.3)',
+            borderColor: 'rgba(245,166,35,0.6)',
             borderWidth: 1.5,
             borderRadius: 5,
-            borderSkipped: false,
-            yAxisID: 'y1'
+            borderSkipped: false
           }
         ]
       },
@@ -764,9 +794,8 @@
             bodyColor: 'rgba(220,224,232,0.8)',
             callbacks: {
               label: (ctx) => {
-                if (ctx.dataset.yAxisID === 'y') return `  CPC: $${ctx.parsed.y.toFixed(2)}`;
-                if (ctx.parsed.y === null) return `  CTR: —`;
-                return `  CTR: ${ctx.parsed.y}%`;
+                if (ctx.parsed.y === null) return `  ${ctx.dataset.label}: —`;
+                return `  ${ctx.dataset.label}: ${ctx.parsed.y}`;
               }
             }
           }
@@ -778,31 +807,18 @@
             border: { color: 'rgba(255,255,255,0.06)' }
           },
           y: {
-            type: 'linear',
-            position: 'left',
+            min: 60,
             title: {
-              display: true, text: 'CPC ($)',
-              color: '#F5A623', font: { size: 11, weight: '500' }
+              display: true,
+              text: 'Performance Index (Campaign Avg = 100)',
+              color: 'rgba(245,166,35,0.7)',
+              font: { size: 11, weight: '500' }
             },
             ticks: {
               color: 'rgba(220,224,232,0.55)',
-              callback: (v) => '$' + v.toFixed(2)
+              callback: (v) => v
             },
             grid: { color: 'rgba(255,255,255,0.04)' },
-            border: { color: 'rgba(255,255,255,0.06)' }
-          },
-          y1: {
-            type: 'linear',
-            position: 'right',
-            title: {
-              display: true, text: 'CTR (%)',
-              color: 'rgba(245,166,35,0.6)', font: { size: 11, weight: '500' }
-            },
-            ticks: {
-              color: 'rgba(220,224,232,0.55)',
-              callback: (v) => v + '%'
-            },
-            grid: { drawOnChartArea: false },
             border: { color: 'rgba(255,255,255,0.06)' }
           }
         }
