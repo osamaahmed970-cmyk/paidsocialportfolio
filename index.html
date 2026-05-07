@@ -601,6 +601,15 @@
     margin-top: 4px;
   }
 
+  .cs-card-placeholder {
+    cursor: default;
+    pointer-events: none;
+  }
+  .cs-card-placeholder:hover {
+    border-color: var(--border);
+    transform: none;
+  }
+
   /* coming soon card */
   .cs-card-soon {
     background: var(--dark2);
@@ -914,10 +923,10 @@
 
       <!-- Poutine Day -->
       <a href="poutine-day.html" class="cs-card fade-in">
-        <div class="cs-thumb" style="background: linear-gradient(135deg, #1a0f00 0%, #0F1318 60%); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:32px;">
-          <div style="font-size:3.5rem;">🍟</div>
-          <div style="font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:800; color:#ffffff; text-align:center; line-height:1.2; letter-spacing:-0.02em;">National<br>Poutine Day</div>
-          <div style="font-size:0.65rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(245,166,35,0.6);">Boardwalk Burgers · Apr 2026</div>
+        <div class="cs-thumb" style="background: linear-gradient(135deg, #1a0f00, #0F1318); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;">
+          <div style="font-size:3rem;">🍟</div>
+          <div style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:800; color:#fff; text-align:center; letter-spacing:-0.02em;">National Poutine Day</div>
+          <div style="font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(245,166,35,0.5);">Apr 2026 · 23 Locations</div>
           <div class="cs-thumb-overlay"></div>
           <div class="cs-thumb-badge">Performance</div>
         </div>
@@ -947,10 +956,61 @@
         </div>
       </a>
 
-      <!-- Coming soon -->
-      <div class="cs-card-soon fade-in" style="transition-delay:0.1s">
-        <div class="cs-soon-icon">⚡</div>
-        <div class="cs-soon-text">More case studies coming soon</div>
+      <!-- Placeholder 2 -->
+      <div class="cs-card cs-card-placeholder fade-in" style="transition-delay:0.1s">
+        <div class="cs-thumb" style="background: linear-gradient(135deg, #080c12, #10161e); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;">
+          <div style="font-size:3rem; opacity:0.35;">📢</div>
+          <div style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:800; color:rgba(255,255,255,0.2); text-align:center; letter-spacing:-0.02em;">Brand Awareness</div>
+          <div style="font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.1);">Case Study Coming Soon</div>
+          <div class="cs-thumb-overlay"></div>
+          <div class="cs-thumb-badge" style="background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.25); border:1px solid rgba(255,255,255,0.08);">Awareness</div>
+        </div>
+        <div class="cs-body">
+          <div class="cs-meta">
+            <span class="cs-platform" style="opacity:0.4;">Meta</span>
+            <span class="cs-platform" style="opacity:0.4;">YouTube</span>
+          </div>
+          <div class="cs-title" style="color:rgba(255,255,255,0.25);">Brand Awareness Campaign</div>
+          <div class="cs-desc" style="opacity:0.4;">Multi-channel awareness push across Meta and YouTube — full case study in progress.</div>
+        </div>
+      </div>
+
+      <!-- Placeholder 3 -->
+      <div class="cs-card cs-card-placeholder fade-in" style="transition-delay:0.2s">
+        <div class="cs-thumb" style="background: linear-gradient(135deg, #080c12, #10161e); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;">
+          <div style="font-size:3rem; opacity:0.35;">🎯</div>
+          <div style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:800; color:rgba(255,255,255,0.2); text-align:center; letter-spacing:-0.02em;">Lead Generation</div>
+          <div style="font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.1);">Case Study Coming Soon</div>
+          <div class="cs-thumb-overlay"></div>
+          <div class="cs-thumb-badge" style="background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.25); border:1px solid rgba(255,255,255,0.08);">Lead Gen</div>
+        </div>
+        <div class="cs-body">
+          <div class="cs-meta">
+            <span class="cs-platform" style="opacity:0.4;">Meta</span>
+            <span class="cs-platform" style="opacity:0.4;">Google</span>
+          </div>
+          <div class="cs-title" style="color:rgba(255,255,255,0.25);">Lead Generation Drive</div>
+          <div class="cs-desc" style="opacity:0.4;">Retargeting and prospecting funnel built around high-intent audiences — full case study in progress.</div>
+        </div>
+      </div>
+
+      <!-- Placeholder 4 -->
+      <div class="cs-card cs-card-placeholder fade-in" style="transition-delay:0.3s">
+        <div class="cs-thumb" style="background: linear-gradient(135deg, #080c12, #10161e); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;">
+          <div style="font-size:3rem; opacity:0.35;">🛍️</div>
+          <div style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:800; color:rgba(255,255,255,0.2); text-align:center; letter-spacing:-0.02em;">Retail Promo</div>
+          <div style="font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.1);">Case Study Coming Soon</div>
+          <div class="cs-thumb-overlay"></div>
+          <div class="cs-thumb-badge" style="background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.25); border:1px solid rgba(255,255,255,0.08);">Performance</div>
+        </div>
+        <div class="cs-body">
+          <div class="cs-meta">
+            <span class="cs-platform" style="opacity:0.4;">TikTok</span>
+            <span class="cs-platform" style="opacity:0.4;">Meta</span>
+          </div>
+          <div class="cs-title" style="color:rgba(255,255,255,0.25);">Retail Promotional Campaign</div>
+          <div class="cs-desc" style="opacity:0.4;">Seasonal retail promo with geo-targeted creative across TikTok and Meta — full case study in progress.</div>
+        </div>
       </div>
 
     </div>
