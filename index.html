@@ -520,6 +520,31 @@
     border-radius: 4px;
   }
 
+  .cs-thumb-graphic {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: radial-gradient(circle at 50% 40%, rgba(245,166,35,0.08) 0%, transparent 65%),
+                linear-gradient(180deg, #0F1318 0%, #161B23 100%);
+    box-shadow: inset 0 0 0 1px rgba(245,166,35,0.15);
+  }
+  .cs-thumb-gfx-emoji {
+    font-size: 3.2rem;
+    line-height: 1;
+    filter: drop-shadow(0 0 14px rgba(245,166,35,0.45));
+  }
+  .cs-thumb-gfx-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+  }
+
   .cs-body { padding: 28px; }
 
   .cs-meta {
@@ -889,8 +914,11 @@
 
       <!-- Poutine Day -->
       <a href="poutine-day.html" class="cs-card fade-in">
-        <div class="cs-thumb" style="position:relative;">
-          <img src="https://lh3.googleusercontent.com/d/1m2OhCxb8Ek547phZ2WABIsxhDtZT78vC" alt="National Poutine Day" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+        <div class="cs-thumb">
+          <div class="cs-thumb-graphic">
+            <span class="cs-thumb-gfx-emoji">🍟</span>
+            <span class="cs-thumb-gfx-title">National Poutine Day</span>
+          </div>
           <div class="cs-thumb-overlay"></div>
           <div class="cs-thumb-badge">Performance</div>
         </div>

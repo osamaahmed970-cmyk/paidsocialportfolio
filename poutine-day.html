@@ -84,8 +84,7 @@
   /* MEGA HERO STATS */
   .hero-results {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 700px;
+    grid-template-columns: repeat(2, 1fr);
     background: var(--gold-soft);
     border: 1px solid var(--gold-line);
     border-radius: 16px;
@@ -93,11 +92,13 @@
     margin-bottom: 20px;
   }
   .hero-result-item {
-    padding: 32px 36px;
+    padding: 26px 32px;
     border-right: 1px solid var(--gold-line);
+    border-bottom: 1px solid var(--gold-line);
     text-align: center;
   }
-  .hero-result-item:last-child { border-right: none; }
+  .hero-result-item:nth-child(2n) { border-right: none; }
+  .hero-result-item:nth-last-child(-n+2) { border-bottom: none; }
   .hero-result-val {
     font-family: 'Syne', sans-serif;
     font-size: clamp(2.2rem, 4vw, 3.4rem);
@@ -114,6 +115,35 @@
     margin-top: 10px;
     line-height: 1.4;
   }
+  /* CASE STUDY HERO GRID */
+  .cs-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 48px;
+    align-items: start;
+  }
+  .cs-hero-image {
+    position: sticky;
+    top: 90px;
+    margin-top: 8px;
+  }
+  .cs-hero-image img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--gold-line);
+    display: block;
+    box-shadow: 0 0 0 1px rgba(245,166,35,0.1), 0 8px 32px rgba(0,0,0,0.5);
+  }
+  .cs-hero-image-caption {
+    font-size: 0.65rem;
+    color: var(--muted);
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+
   /* CONTENT WRAPPER */
   .cs-content { max-width: 920px; margin: 0 auto; padding: 80px 60px; }
 
@@ -335,8 +365,9 @@
   @media (max-width: 900px) {
     nav { padding: 18px 24px; }
     .cs-hero { padding: 100px 24px 50px; }
-    .hero-results { grid-template-columns: repeat(3, 1fr); max-width: 100%; }
-    .hero-result-item { padding: 22px 16px; }
+    .cs-hero-grid { grid-template-columns: 1fr; }
+    .cs-hero-image { display: none; }
+    .hero-result-item { padding: 20px 16px; }
     .cs-content { padding: 50px 24px; }
     .section-num { font-size: 4rem; }
     .perf-grid { grid-template-columns: repeat(2, 1fr); }
@@ -348,9 +379,6 @@
     .cs-bottom-nav { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
   }
   @media (max-width: 480px) {
-    .hero-results { grid-template-columns: 1fr; }
-    .hero-result-item { border-right: none; border-bottom: 1px solid var(--gold-line); }
-    .hero-result-item:last-child { border-bottom: none; }
     .perf-grid { grid-template-columns: 1fr; }
   }
 </style>
@@ -364,33 +392,46 @@
 
   <!-- CASE STUDY HERO -->
   <div class="cs-hero">
-    <div class="cs-breadcrumb"><a href="index.html">Portfolio</a> / Case Study</div>
-    <h1 class="cs-hero-title">National Poutine Day<br><span>Boardwalk Burgers</span></h1>
-    <p class="cs-hero-sub">A multi-platform paid social campaign across 23 franchise locations, driving in-store redemptions through hyper-local targeting on a 2-day promotional window.</p>
-    <div class="cs-tags">
-      <span class="cs-tag highlight">Performance Campaign</span>
-      <span class="cs-tag">Meta Ads</span>
-      <span class="cs-tag">TikTok Ads</span>
-      <span class="cs-tag">YouTube / PMAX</span>
-      <span class="cs-tag">Instagram</span>
-      <span class="cs-tag">QSR / Franchise</span>
-      <span class="cs-tag">April 2026</span>
-    </div>
+    <div class="cs-hero-grid">
+      <div>
+        <div class="cs-breadcrumb"><a href="index.html">Portfolio</a> / Case Study</div>
+        <h1 class="cs-hero-title">National Poutine Day<br><span>Boardwalk Burgers</span></h1>
+        <p class="cs-hero-sub">A multi-platform paid social campaign across 23 franchise locations, driving in-store redemptions through hyper-local targeting on a 2-day promotional window.</p>
+        <div class="cs-tags">
+          <span class="cs-tag highlight">Performance Campaign</span>
+          <span class="cs-tag">Meta Ads</span>
+          <span class="cs-tag">TikTok Ads</span>
+          <span class="cs-tag">YouTube / PMAX</span>
+          <span class="cs-tag">Instagram</span>
+          <span class="cs-tag">QSR / Franchise</span>
+          <span class="cs-tag">April 2026</span>
+        </div>
 
-    <!-- KEY RESULTS — HERO SCALE -->
-    <div class="hero-results">
-      <div class="hero-result-item">
-        <div class="hero-result-val">4,500+</div>
-        <div class="hero-result-label">In-Store<br>Redemptions</div>
+        <!-- KEY RESULTS — 2×2 GRID -->
+        <div class="hero-results">
+          <div class="hero-result-item">
+            <div class="hero-result-val">4,500+</div>
+            <div class="hero-result-label">In-Store<br>Redemptions</div>
+          </div>
+          <div class="hero-result-item">
+            <div class="hero-result-val">$0.89</div>
+            <div class="hero-result-label">Cost per<br>Redemption</div>
+          </div>
+          <div class="hero-result-item">
+            <div class="hero-result-val">5.6x</div>
+            <div class="hero-result-label">ROAS</div>
+          </div>
+          <div class="hero-result-item">
+            <div class="hero-result-val">2 Days</div>
+            <div class="hero-result-label">Campaign<br>Window</div>
+          </div>
+        </div>
       </div>
-      <div class="hero-result-item">
-        <div class="hero-result-val">$0.89</div>
-        <div class="hero-result-label">Cost per<br>Redemption</div>
-      </div>
-      <div class="hero-result-item">
-        <div class="hero-result-val">5.6x</div>
-        <div class="hero-result-label">ROAS</div>
-      </div>
+
+      <figure class="cs-hero-image">
+        <img src="https://lh3.googleusercontent.com/d/1m2OhCxb8Ek547phZ2WABIsxhDtZT78vC" alt="Campaign creative — static ad format">
+        <figcaption class="cs-hero-image-caption">Campaign Creative<br>Static Format</figcaption>
+      </figure>
     </div>
   </div>
 
