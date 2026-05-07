@@ -108,7 +108,7 @@
     pointer-events: none;
   }
 
-  .hero-left { position: relative; z-index: 1; }
+  .hero-left { position: relative; z-index: 1; max-width: 600px; }
 
   .hero-tag {
     display: inline-flex;
@@ -293,6 +293,10 @@
     padding: 0 40px;
     border-right: 1px solid var(--border);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .stat-item:first-child { padding-left: 0; }
   .stat-item:last-child { border-right: none; padding-right: 0; }
@@ -749,7 +753,7 @@
     <div class="hero-right fade-in" style="transition-delay:0.2s">
       <div class="headshot-wrap">
         <!-- REPLACE src WITH YOUR PHOTO URL -->
-        <img src="https://drive.google.com/uc?export=view&id=1y0i4G4BUsMnfautOcmD1DGQrCqL9KALj" alt="Osama Ahmed" class="headshot-img"
+        <img src="https://lh3.googleusercontent.com/d/1y0i4G4BUsMnfautOcmD1DGQrCqL9KALj" alt="Osama Ahmed" class="headshot-img"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <div class="headshot-placeholder" style="display:none;">
           <svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="rgba(245,166,35,0.5)">
@@ -886,7 +890,7 @@
       <!-- Poutine Day -->
       <a href="poutine-day.html" class="cs-card fade-in">
         <div class="cs-thumb" style="position:relative;">
-          <img src="https://drive.google.com/uc?export=view&id=1m2OhCxb8Ek547phZ2WABIsxhDtZT78vC" alt="National Poutine Day" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <img src="https://lh3.googleusercontent.com/d/1m2OhCxb8Ek547phZ2WABIsxhDtZT78vC" alt="National Poutine Day" style="width:100%;height:100%;object-fit:cover;display:block;">
           <div class="cs-thumb-overlay"></div>
           <div class="cs-thumb-badge">Performance</div>
         </div>
