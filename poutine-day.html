@@ -84,7 +84,8 @@
   /* MEGA HERO STATS */
   .hero-results {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 680px;
     background: var(--gold-soft);
     border: 1px solid var(--gold-line);
     border-radius: 16px;
@@ -92,20 +93,18 @@
     margin-bottom: 20px;
   }
   .hero-result-item {
-    padding: 26px 32px;
+    padding: 20px 16px;
     border-right: 1px solid var(--gold-line);
-    border-bottom: 1px solid var(--gold-line);
     text-align: center;
   }
-  .hero-result-item:nth-child(2n) { border-right: none; }
-  .hero-result-item:nth-last-child(-n+2) { border-bottom: none; }
+  .hero-result-item:last-child { border-right: none; }
   .hero-result-val {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-size: 1.6rem;
     font-weight: 800;
     color: var(--gold);
     line-height: 1;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
   }
   .hero-result-label {
     font-size: 0.65rem;
@@ -120,12 +119,12 @@
     display: grid;
     grid-template-columns: 1fr 280px;
     gap: 48px;
-    align-items: start;
+    align-items: flex-start;
   }
   .cs-hero-image {
     position: sticky;
     top: 90px;
-    margin-top: 8px;
+    margin-top: 20px;
   }
   .cs-hero-image img {
     width: 100%;
